@@ -30,4 +30,4 @@ make
 
 依赖：
 
-nginx muduo boost redis gcc mysql
+nginx muduo boost redis gcc mysql  json

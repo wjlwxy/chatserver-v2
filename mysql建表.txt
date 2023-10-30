@@ -1,0 +1,10 @@
+# create table user(id int PRIMARY KEY AUTO_INCREMENT comment '用户id', name varchar(50) NOT NULL UNIQUE comment '用户名', password varchar(50) NOT NULL comment '用户密码', 
+# state ENUM('online', 'offline') DEFAULT 'offline' comment '当前登录状态');
+
+# create table friend(userid int NOT NULL  comment '用户id', friendid int NOT NULL comment '好友id', PRIMARY KEY(userid, friendid));
+
+# create table allgroup(id int PRIMARY KEY AUTO_INCREMENT comment '组id', groupname varchar(50) NOT NULL comment '组名称', groupdesc varchar(200) DEFAULT '' comment '组功能描述');
+
+# create table groupuser(groupid int PRIMARY KEY comment '组id', userid int NOT NULL comment '组员id', grouprole ENUM('creator', 'normal') DEFAULT 'normal' comment '组内角色');
+
+# create table offlinemessage(userid int NOT NULL comment '用户id', message VARCHAR(500) NOT NULL comment '离线消息 (存储Json字符串)');
